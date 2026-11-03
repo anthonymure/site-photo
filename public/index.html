@@ -79,11 +79,11 @@
     /* Films */
     .films {
       display: grid; gap: 48px var(--gap);
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 360px));
     }
     .films figure { margin: 0; }
     .video {
-      position: relative; aspect-ratio: 16 / 9; background: var(--tile);
+      position: relative; aspect-ratio: 9 / 16; background: var(--tile);
       display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
     .video video, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
@@ -123,7 +123,9 @@
     <a class="brand" href="#top">Mure Anthony</a>
     <nav aria-label="Main">
       <a href="#works">Works</a>
+      <a href="#films">Films</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -237,6 +239,24 @@
     </div>
   </section>
 
+  <section id="films" aria-labelledby="films-title">
+    <div class="section-head">
+      <h2 id="films-title" class="label">Films</h2>
+      <span class="muted" style="font-size:13px">03</span>
+    </div>
+    <div class="films">
+      <figure>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/OoAuCqnSSdo?rel=0&playsinline=1" title="Film 01 by Mure Anthony" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </figure>
+      <figure>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/yrz5k53EWKM?rel=0&playsinline=1" title="Film 02 by Mure Anthony" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </figure>
+      <figure>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/lQyBTRwS3iw?rel=0&playsinline=1" title="Film 03 by Mure Anthony" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </figure>
+    </div>
+  </section>
+
   <section id="about" aria-labelledby="about-title">
     <div class="section-head" style="padding-bottom:40px">
       <h2 id="about-title" class="label">About</h2>
@@ -249,9 +269,15 @@
     </div>
   </section>
 
-  <footer aria-label="Footer">
-    <div class="foot"><span>© 2026 Mure Anthony</span></div>
-    <!-- TODO: add Contact section (email, Instagram, Vimeo) once provided -->
+  <footer id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="label">Contact</h2>
+    <a class="email" href="mailto:mure.anthony@gmail.com">mure.anthony@gmail.com</a>
+    <div class="foot">
+      <div>
+        <a href="https://www.instagram.com/photographe_imposteur/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <span>© 2026 Mure Anthony</span>
+    </div>
   </footer>
 
 </div>
